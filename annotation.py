@@ -1,8 +1,8 @@
-import os
+#import os
 import sys
-dir_path = os.getcwd()
-sys.path.append(dir_path + '../adelaidet/demo/predictor')
-sys.path.append(dir_path + '../xmem')
+#dir_path = os.getcwd()
+sys.path.append('../adelaidet/demo/predictor')
+sys.path.append('../xmem')
 
 import numpy as np
 import atexit
