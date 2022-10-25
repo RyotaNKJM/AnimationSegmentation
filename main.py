@@ -151,13 +151,14 @@ if __name__ == "__main__":
             with tqdm(total=scene_length, leave=False) as frame_set:
 
                 for ti, frame in enumerate(loader):
-                    ani_seg_img = frame['ani_seg_img']
+                    im_path = frame['im_path']
                     info = frame['info']
                     frame_name = info['frame']
 
                     frame_set.set_description('Progress {}'.format(frame_name))
 
                     # Anime Segmentation
+                    ani_seg_img = read_image(im_path, format="BGR")
                     predictions, visualized_output = visualization.run_to_mask(ani_seg_img)
                     ani_seg_scores.append(predictions["instances"].scores[0].item())
                     ani_seg_result.append(visualized_output)
