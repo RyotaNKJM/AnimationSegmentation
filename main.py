@@ -160,7 +160,11 @@ if __name__ == "__main__":
                     # Anime Segmentation
                     ani_seg_img = read_image(im_path, format="BGR")
                     predictions, visualized_output = visualization.run_to_mask(ani_seg_img)
-                    ani_seg_scores.append(predictions["instances"].scores[0].item())
+                    score = predictions["instances"].scores
+                    if score.size()[0] == 0:
+                        ani_seg_scores.append(0)
+                    else:
+                        ani_seg_scores.append(predictions["instances"].scores[0].item())
                     ani_seg_result.append(visualized_output)
 
                     frame_set.update(1)
