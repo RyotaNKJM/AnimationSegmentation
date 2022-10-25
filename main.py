@@ -151,7 +151,7 @@ if __name__ == "__main__":
             with tqdm(total=scene_length, leave=False) as frame_set:
 
                 for ti, frame in enumerate(loader):
-                    im_path = frame['im_path']
+                    im_path = frame['im_path'][0]
                     info = frame['info']
                     frame_name = info['frame']
 
