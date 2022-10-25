@@ -34,7 +34,7 @@ class FrameReader(Dataset):
         data = {}
         info['frame'] = frame
 
-        im_path = path.join(self.frame_dif, frame)
+        im_path = path.join(self.frame_dir, frame)
 
         ani_seg_img = read_image(im_path, format="BGR")
 
