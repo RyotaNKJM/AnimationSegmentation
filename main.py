@@ -237,7 +237,7 @@ if __name__ == "__main__":
                         vos_mask = None
 
                     if vos_mask is not None:
-                        vos_mask, labels = mapper.convert_mask(vos_mask[0].numpy())
+                        vos_mask, labels = mapper.convert_mask(vos_mask.numpy())
                         vos_mask = torch.Tensor(vos_mask).cuda()
                         processor.set_all_labels(list(mapper.remappings.values()))
                     else:
