@@ -131,7 +131,7 @@ if __name__ == "__main__":
 
         for scene_reader in meta_loader:
 
-            loader = DataLoader(scene_reader, batch_size=1, shuffle=False, num_workers=2)
+            loader = DataLoader(scene_reader, batch_size=1, shuffle=False, num_workers=0)
             scene_name = scene_reader.scene_name
             scene_length = len(loader)
             # no need to count usage for LT if the video is not that long anyway
