@@ -36,11 +36,8 @@ class FrameReader(Dataset):
 
         im_path = path.join(self.frame_dir, frame)
 
-        # ani_seg_img = im_path
-
         vos_img = Image.open(im_path).convert('RGB')
-        # vos_img = np.array(vos_img)
-        vos_img = self.im_transform(vos_img.copy())
+        vos_img = self.im_transform(vos_img)
 
         data['im_path'] = im_path
         data['vos_img'] = vos_img
