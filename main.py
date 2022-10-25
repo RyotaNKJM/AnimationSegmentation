@@ -168,10 +168,8 @@ if __name__ == "__main__":
             # best annotation mask
             best_frame = np.argmax(ani_seg_scores)
             mask_img = ani_seg_result[best_frame].get_image()
-            logger.info(mask_img.shape)
             mask = Image.fromarray(mask_img).convert('P')
             mask = np.asarray(mask, dtype=np.uint8)
-            logger.info(mask.shape)
 
             # be possible to split and reverse
             frames = []
@@ -223,6 +221,9 @@ if __name__ == "__main__":
                     out_mask = mapper.remap_index_mask(out_mask)
                     out_img = Image.fromarray(out_mask)
                     out_img.save(os.path.join(this_out_path, frame_name[:-4] + '.png'))
+
+            mapper = MaskMapper()
+            processor = InferenceCore(network, config=config)
 
             for ti, frame in zip(indexes[best_frame:], frames[best_frame:]):
                 with torch.cuda.amp.autocast(enabled=not args.benchmark):
