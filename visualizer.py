@@ -380,6 +380,8 @@ class Visualizer:
         self._instance_mode = instance_mode
         self.keypoint_threshold = _KEYPOINT_THRESHOLD
 
+        self.mask_colors = [random_color(rgb=True, maximum=1) for _ in range(10)]
+
     def draw_instance_predictions(self, predictions):
         """
         Draw instance-level prediction results on an image.
@@ -410,7 +412,7 @@ class Visualizer:
             ]
             alpha = 0.8
         else:
-            colors = None
+            colors = self.mask_colors
             alpha = 0.5
 
         if self._instance_mode == ColorMode.IMAGE_BW:

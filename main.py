@@ -169,6 +169,7 @@ if __name__ == "__main__":
             best_frame = np.argmax(ani_seg_scores)
             mask_img = ani_seg_result[best_frame].get_image()
             mask = Image.fromarray(mask_img).convert('P')
+            mask_pal = mask.getpalette()
             mask = np.asarray(mask, dtype=np.uint8)
 
             # be possible to split and reverse
@@ -220,6 +221,8 @@ if __name__ == "__main__":
                     os.makedirs(this_out_path, exist_ok=True)
                     out_mask = mapper.remap_index_mask(out_mask)
                     out_img = Image.fromarray(out_mask)
+                    if mask_pal is not None:
+                        out_img.putpalette(mask_pal)
                     out_img.save(os.path.join(this_out_path, frame_name[:-4] + '.png'))
 
             mapper = MaskMapper()
@@ -263,6 +266,8 @@ if __name__ == "__main__":
                     os.makedirs(this_out_path, exist_ok=True)
                     out_mask = mapper.remap_index_mask(out_mask)
                     out_img = Image.fromarray(out_mask)
+                    if mask_pal is not None:
+                        out_img.putpalette(mask_pal)
                     out_img.save(os.path.join(this_out_path, frame_name[:-4] + '.png'))
 
             scene_set.update(1)
