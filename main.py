@@ -21,7 +21,8 @@ from detectron2.utils.logger import setup_logger
 import sys
 dir_path = os.getcwd()
 sys.path.append(dir_path + '/../')
-#sys.path.append(dir_path + '/../xmem')
+sys.path.append(dir_path + '/../adelaidet')
+sys.path.append(dir_path + '/../xmem')
 
 
 from annotation import FlameMaskAnnotation
