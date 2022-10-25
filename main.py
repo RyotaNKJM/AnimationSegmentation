@@ -167,8 +167,11 @@ if __name__ == "__main__":
 
             # best annotation mask
             best_frame = np.argmax(ani_seg_scores)
-            mask = Image.fromarray(ani_seg_result[best_frame].get_image()).convert('P')
+            mask_img = ani_seg_result[best_frame].get_image()
+            logger.info(mask_img.shape)
+            mask = Image.fromarray(mask_img).convert('P')
             mask = np.asarray(mask, dtype=np.uint8)
+            logger.info(mask.shape)
 
             # be possible to split and reverse
             frames = []
