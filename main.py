@@ -115,7 +115,7 @@ if __name__ == "__main__":
 
     torch.autograd.set_grad_enabled(False)
 
-    meta_dataset = FrameDataset(args.input)
+    meta_dataset = FrameDataset(args.input[0])
     meta_loader = meta_dataset.get_datasets()
 
     visualization = FlameMaskAnnotation(cfg)  # AnimeSegmentationModel
