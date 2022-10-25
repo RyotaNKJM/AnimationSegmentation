@@ -1,7 +1,3 @@
-import sys
-sys.path.append('/adelaidet')
-sys.path.append('/xmem')
-
 import argparse
 import glob
 import multiprocessing as mp
@@ -21,6 +17,12 @@ from PIL import Image
 from detectron2.config import get_cfg
 from detectron2.data.detection_utils import read_image
 from detectron2.utils.logger import setup_logger
+
+import sys
+dir_path = os.getcwd()
+sys.path.append(dir_path + '../adelaidet')
+sys.path.append(dir_path + '../xmem')
+
 
 from annotation import FlameMaskAnnotation
 
