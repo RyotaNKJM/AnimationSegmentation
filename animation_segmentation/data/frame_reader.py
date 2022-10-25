@@ -19,7 +19,7 @@ class FrameReader(Dataset):
         frame_dir: a directory of frames
         """
         self.scene_name = scene_name
-        self.frame_dif = frame_dir
+        self.frame_dir = frame_dir
 
         self.frames = sorted(os.listdir(self.frame_dir))
 
