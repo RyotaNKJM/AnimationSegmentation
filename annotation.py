@@ -1,5 +1,8 @@
+import os
 import sys
-sys.path.append('/adelaidet')
+dir_path = os.getcwd()
+sys.path.append(dir_path + '../adelaidet')
+sys.path.append(dir_path + '../xmem')
 
 import numpy as np
 import atexit
