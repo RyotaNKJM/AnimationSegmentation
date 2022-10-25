@@ -1,7 +1,7 @@
 import os
 import sys
 dir_path = os.getcwd()
-sys.path.append(dir_path + '../adelaidet')
+sys.path.append(dir_path + '../adelaidet/demo/predictor')
 sys.path.append(dir_path + '../xmem')
 
 import numpy as np
@@ -19,7 +19,7 @@ from detectron2.utils.video_visualizer import VideoVisualizer
 from detectron2.utils.visualizer import ColorMode, _create_text_labels, GenericMask
 
 from visualizer import Visualizer
-from adelaidet.demo.predictor import AsyncPredictor
+from predictor import AsyncPredictor
 
 
 class FlameMaskAnnotation(object):
