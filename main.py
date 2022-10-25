@@ -1,3 +1,7 @@
+import sys
+sys.path.append('/adelaidet')
+sys.path.append('/xmem')
+
 import argparse
 import glob
 import multiprocessing as mp
@@ -21,9 +25,9 @@ from detectron2.utils.logger import setup_logger
 from annotation import FlameMaskAnnotation
 
 from animation_segmentation.data.frame_datasets import FrameDataset
-from ..xmem.inference.data.mask_mapper import MaskMapper
-from ..xmem.model.network import XMem
-from ..xmem.inference.inference_core import InferenceCore
+from xmem.inference.data.mask_mapper import MaskMapper
+from xmem.model.network import XMem
+from xmem.inference.inference_core import InferenceCore
 
 from progressbar import progressbar
 
