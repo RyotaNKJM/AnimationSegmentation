@@ -17,7 +17,7 @@ from detectron2.data import MetadataCatalog
 from detectron2.structures import BitMasks, Boxes, BoxMode, Keypoints, PolygonMasks, RotatedBoxes
 from detectron2.utils.file_io import PathManager
 
-from .colormap import random_color
+from detectron2.utils.colormap import random_color
 
 logger = logging.getLogger(__name__)
 
