@@ -1,7 +1,7 @@
 import os
 from os import path
 
-from frame_reader import FrameReader
+from .frame_reader import FrameReader
 
 
 class FrameDataset:

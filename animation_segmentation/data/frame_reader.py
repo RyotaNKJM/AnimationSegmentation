@@ -8,7 +8,7 @@ import torch.nn.functional as F
 from PIL import Image
 import numpy as np
 
-from xmem.dataset.range_transform import im_normalization
+from ....xmem.dataset.range_transform import im_normalization
 
 from detectron2.data.detection_utils import read_image
 

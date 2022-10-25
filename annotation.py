@@ -13,7 +13,7 @@ from detectron2.utils.video_visualizer import VideoVisualizer
 from detectron2.utils.visualizer import ColorMode, _create_text_labels, GenericMask
 
 from visualizer import Visualizer
-from adelaidet.demo.predictor import AsyncPredictor
+from ..adelaidet.demo.predictor import AsyncPredictor
 
 
 class FlameMaskAnnotation(object):
