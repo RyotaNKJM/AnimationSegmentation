@@ -14,7 +14,7 @@ from torch.utils.data import DataLoader
 import numpy as np
 from PIL import Image
 
-from detectron2.config import get_cfg
+# from detectron2.config import get_cfg
 from detectron2.data.detection_utils import read_image
 from detectron2.utils.logger import setup_logger
 
@@ -28,6 +28,9 @@ sys.path.append(dir_path + '/../xmem')
 from annotation import FlameMaskAnnotation
 
 from animation_segmentation.data.frame_datasets import FrameDataset
+
+from adelaidet.adet.config import get_cfg
+
 from xmem.inference.data.mask_mapper import MaskMapper
 from xmem.model.network import XMem
 from xmem.inference.inference_core import InferenceCore
