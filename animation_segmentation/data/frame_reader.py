@@ -1,3 +1,7 @@
+import sys
+sys.path.append('/adelaidet')
+sys.path.append('/xmem')
+
 import os
 from os import path
 

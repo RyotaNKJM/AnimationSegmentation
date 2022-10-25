@@ -1,3 +1,6 @@
+import sys
+sys.path.append('/adelaidet')
+
 import numpy as np
 import atexit
 import bisect
