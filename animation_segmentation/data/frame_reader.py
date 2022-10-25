@@ -9,9 +9,9 @@ from PIL import Image
 import numpy as np
 
 import sys
-#dir_path = os.getcwd()
-sys.path.append('../../../adelaidet')
-sys.path.append('../../../xmem')
+dir_path = os.getcwd()
+sys.path.append(dir_path + '/../../../adelaidet')
+sys.path.append(dir_path + '/../../../xmem')
 
 from xmem.dataset.range_transform import im_normalization
 

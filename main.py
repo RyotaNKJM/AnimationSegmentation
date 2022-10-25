@@ -19,9 +19,9 @@ from detectron2.data.detection_utils import read_image
 from detectron2.utils.logger import setup_logger
 
 import sys
-#dir_path = os.getcwd()
-sys.path.append('../adelaidet')
-sys.path.append('../xmem')
+dir_path = os.getcwd()
+sys.path.append(dir_path + '/../adelaidet')
+sys.path.append(dir_path + '/../xmem')
 
 
 from annotation import FlameMaskAnnotation
