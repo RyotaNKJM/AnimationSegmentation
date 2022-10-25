@@ -8,6 +8,11 @@ import torch.nn.functional as F
 from PIL import Image
 import numpy as np
 
+import sys
+dir_path = os.getcwd()
+sys.path.append(dir_path + '/../../../')
+#sys.path.append(dir_path + '/../../../xmem')
+
 from xmem.dataset.range_transform import im_normalization
 
 from detectron2.data.detection_utils import read_image
