@@ -56,7 +56,7 @@ def get_parser():
         metavar="FILE",
         help="path to config file",
     )
-    parser.add_argument('--model', default='./xmem/saves/XMem.pth')
+    parser.add_argument('--model', default='../xmem/saves/XMem.pth')
     parser.add_argument("--input", nargs="+", help="A list of space separated input images")
     parser.add_argument("--output", help="A directory to save outputs. ", default="./outputs")
     parser.add_argument(
