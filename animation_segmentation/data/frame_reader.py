@@ -39,6 +39,7 @@ class FrameReader(Dataset):
         ani_seg_img = read_image(im_path, format="BGR")
 
         vos_img = Image.open(im_path).convert('RGB')
+        vos_img = np.array(vos_img)
         vos_img = self.im_transform(vos_img)
 
         data['ani_seg_img'] = ani_seg_img
