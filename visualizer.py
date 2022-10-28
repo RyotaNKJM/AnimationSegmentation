@@ -17,7 +17,7 @@ from detectron2.data import MetadataCatalog
 from detectron2.structures import BitMasks, Boxes, BoxMode, Keypoints, PolygonMasks, RotatedBoxes
 from detectron2.utils.file_io import PathManager
 
-from detectron2.utils.colormap import random_color
+from detectron2.utils.colormap import random_color, _COLORS
 
 logger = logging.getLogger(__name__)
 
@@ -380,7 +380,11 @@ class Visualizer:
         self._instance_mode = instance_mode
         self.keypoint_threshold = _KEYPOINT_THRESHOLD
 
-        self.mask_colors = [random_color(rgb=True, maximum=1) for _ in range(10)]
+        color_num_list = [
+            57, 63, 69, 72, 1, 17, 0, 3, 4, 5,
+            6, 8, 9, 52, 13, 14, 11, 40, 50, 30
+        ]
+        self.mask_colors = [_COLORS[i]*255 for i in color_num_list]
 
     def draw_instance_predictions(self, predictions):
         """
