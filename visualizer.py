@@ -384,7 +384,7 @@ class Visualizer:
             57, 63, 69, 72, 1, 17, 0, 3, 4, 5,
             6, 8, 9, 52, 13, 14, 11, 40, 50, 30
         ]
-        self.mask_colors = [_COLORS[i]*255 for i in color_num_list]
+        self.mask_colors = [_COLORS[i] for i in color_num_list]
 
     def draw_instance_predictions(self, predictions):
         """
