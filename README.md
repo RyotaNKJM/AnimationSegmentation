@@ -1,7 +1,9 @@
 # Video Instance Segmentaion for Animation
+<img src="./thumnail_final.jpg" width=50%>
+
 Video instance segmentaion for animation with pretrained models, instance segmentation for anime characters image and semi-supervised video object segmentation. 
 
-This program uses [Yet-Another-Anime-Segmenter](https://github.com/zymk9/Yet-Another-Anime-Segmenter) as instance segmentation and [XMem](https://github.com/hkchengrex/XMem) as video object segmentation. The result of YAAS is used as XMem input.
+This program uses [Yet-Another-Anime-Segmenter](https://github.com/zymk9/Yet-Another-Anime-Segmenter) as instance segmentation and [XMem](https://github.com/hkchengrex/XMem) as video object segmentation. The result of YAAS is used as XMem input. For more information, click [here](./oacis2022_slide_final2.pdf).
 
 ## Installation
 Both Yet-Another-Anime-Segmenter and XMem are required. Please refer to the official guide from [Yet-Another-Anime-Segmenter](https://github.com/zymk9/Yet-Another-Anime-Segmenter#installation) and [XMem](https://github.com/hkchengrex/XMem/blob/main/docs/GETTING_STARTED.md) is provided.
